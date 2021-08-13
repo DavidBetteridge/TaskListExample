@@ -4,7 +4,9 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import TaskList from './tasklist';
+import Unallocated from './unallocated';
+import Other from './other';
+import Pairings from './pairings';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TasklistContainer() {
+export default function WordpressPage() {
   const classes = useStyles();
 
   return (
@@ -29,7 +31,7 @@ export default function TasklistContainer() {
           <Typography className={classes.heading}>My Pairings</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <TaskList mode="pairings"/>
+          <Pairings/>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -40,7 +42,7 @@ export default function TasklistContainer() {
           <Typography className={classes.heading}>My Tasks</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <TaskList mode="other"/>
+        <Other/>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -51,7 +53,7 @@ export default function TasklistContainer() {
           <Typography className={classes.heading}>Unallocated Tasks</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <TaskList mode="unallocated"/>
+        <Unallocated />
         </AccordionDetails>
       </Accordion>
     </div>

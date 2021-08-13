@@ -1,11 +1,11 @@
 import './App.css';
-import TasklistContainer from './components/tasklist_container'
+import WordPressPage from './components/wordpress_page'
 import {TaskContextProvider} from './components/task_provider'
 
 function App() {
   return (
     <TaskContextProvider>
-        <TasklistContainer />
+        <WordPressPage />
     </TaskContextProvider>
   );
 }
